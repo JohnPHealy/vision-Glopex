@@ -1,0 +1,96 @@
+{
+    "name": "torchControls",
+    "maps": [
+        {
+            "name": "torch",
+            "id": "e04c8ea9-06e3-4061-b1e2-a535def11699",
+            "actions": [
+                {
+                    "name": "TorchFollowMouse",
+                    "type": "PassThrough",
+                    "id": "881e2c29-bdf4-48ed-8486-85dd2d26a044",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "TorchKeys",
+                    "type": "Button",
+                    "id": "0de515b9-979a-4435-876b-e44eaf93bcaa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "74601117-e6bd-4e68-a9b2-ae0c92b3a9ca",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TorchFollowMouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "25c62cd4-8e19-4c83-8419-52ef3297728f",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TorchKeys",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "25e6d103-8606-4f18-8aab-5664c96040e0",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TorchKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "e1db7e9b-70e8-49ea-b547-9384882de974",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TorchKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "2701a721-0769-4389-882b-538b9e46feca",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TorchKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "bf03b3cf-147d-43a5-8994-f79d3e6a5ba4",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TorchKeys",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
