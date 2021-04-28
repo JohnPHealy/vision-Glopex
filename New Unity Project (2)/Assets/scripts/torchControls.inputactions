@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "TorchFollowMouse",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "881e2c29-bdf4-48ed-8486-85dd2d26a044",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
@@ -26,7 +26,7 @@
                 {
                     "name": "",
                     "id": "74601117-e6bd-4e68-a9b2-ae0c92b3a9ca",
-                    "path": "<Mouse>/delta",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
