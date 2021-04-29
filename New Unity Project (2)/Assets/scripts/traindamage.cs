@@ -13,6 +13,8 @@ public class traindamage : MonoBehaviour
     void Start()
     {
        timerRunning = false;
+       
+       
     }
 
     // Update is called once per frame
@@ -21,10 +23,20 @@ public class traindamage : MonoBehaviour
         if(timerRunning == true)
         {
         timer +=Time.deltaTime;
+        GameObject.Find("trainSkeleton").SendMessage("changing", timer);
+        }
+        else{
+        if(timerRunning == false && timer>0){
+        
+        timer -=(Time.deltaTime)/4;               
+        GameObject.Find("trainSkeleton").SendMessage("reverting", timer);
+        }
         }
         Debug.Log(timer);
+        
 
     }
+    
     public void startTimer(){
     
         timerRunning = true;
