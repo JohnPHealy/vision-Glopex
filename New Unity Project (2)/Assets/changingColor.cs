@@ -18,12 +18,12 @@ public GameObject myObject;
     void changing(float coloration)
     {
    
-    myObject.GetComponent<MeshRenderer>().material.color = new Color(coloration, coloration, coloration);
+    myObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(coloration, coloration, coloration));
     }
     
     void reverting(float coloration)
     {
-    myObject.GetComponent<MeshRenderer>().material.color =  new Color(coloration, coloration, coloration);
+    myObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(coloration*2, coloration*2, coloration*2));
     }
 }
 
