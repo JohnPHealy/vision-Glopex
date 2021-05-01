@@ -5,8 +5,7 @@ using UnityEngine;
 public class changingColor : MonoBehaviour
 {
     // Start is called before the first frame update
-  public Material powerOff;
-public Material powerOn;
+  public Material trainPostDefeat;
 public GameObject myObject;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +23,12 @@ public GameObject myObject;
     void reverting(float coloration)
     {
     myObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(coloration*2, coloration*2, coloration*2));
+    }
+    void postDefeat(){
+    
+    myObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color(0,0,0));
+    myObject.GetComponent<MeshRenderer>().material = trainPostDefeat;
+    
     }
 }
 

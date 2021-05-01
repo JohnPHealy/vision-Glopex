@@ -8,19 +8,22 @@ public class traindamage : MonoBehaviour
     private bool isdead;
     private bool timerRunning;
     private float timer;
-    private Animation anim;
+    private Animator anim;
+    private bool defeated;
     
     // Start is called before the first frame update
     void Start()
     {
        timerRunning = false;
-       anim = GetComponent<Animation>();
+       defeated = false;
+       anim = GetComponent<Animator>();
        
     }
 
     // Update is called once per frame
     void Update()
     {
+    if(defeated == false){
         if(timerRunning == true)
         {
         timer +=Time.deltaTime;
@@ -38,16 +41,20 @@ public class traindamage : MonoBehaviour
         Debug.Log(timer);
         if(timer > 6)
         {
-         anim.PlayQueued("FallingTrain", QueueMode.CompleteOthers);
+         anim.Play("FallingTrain", 0, 0f);
+         GameObject.Find("trainLight").SendMessage("stopLight");
+         GameObject.Find("trainSkeleton").SendMessage("postDefeat");
+         GameObject.Find("postLight").SendMessage("lightAnimation");
+         defeated = true;
         }
-
+}
     }
     
     public void startTimer(){
     
         timerRunning = true;
 }
-   public void pauseTimer(){
+   public void pauseTimer(){                                                        
     
     
         timerRunning = false;

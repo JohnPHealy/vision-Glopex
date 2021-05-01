@@ -23,4 +23,8 @@ public class lightManagement : MonoBehaviour
         myLight.intensity = value*2;
     
     }
-}
+    public void stopLight()
+    {
+    myLight.intensity = 0f;
+    }
+    }
