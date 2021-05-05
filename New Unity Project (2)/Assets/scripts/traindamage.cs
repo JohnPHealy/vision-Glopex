@@ -46,6 +46,8 @@ public class traindamage : MonoBehaviour
          GameObject.Find("trainSkeleton").SendMessage("postDefeat");
          GameObject.Find("postLight").SendMessage("lightAnimation");
          defeated = true;
+         GameObject.Find("mensola").SendMessage("destroy");
+         GameObject.Find("mensola2").SendMessage("destroy");
         }
 }
     }

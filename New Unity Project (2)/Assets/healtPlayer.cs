@@ -17,9 +17,9 @@ public class healtPlayer : MonoBehaviour
     {
         
     }
-    public void OnCollisionEnter(Collision col)collision
+    public void OnCollisionEnter(Collision col)
     {
-    if (col.gameObject.tag == "TrainDamagingCollider")
+    
     {
     
     }
